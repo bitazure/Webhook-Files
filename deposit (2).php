@@ -16,8 +16,8 @@ $CustomerEmail = $_GET['CustomerEmail'];
 $CustomerPhone = $_GET['CustomerPhone'];
 $CustomerName = $_GET['CustomerName'];
 $MERCHANT_KEY = "fHZF/nptlfRDv57mcl2g+w=="; // Merchant Key From App
-$SuccessUrl ="https://towercrypto.uk/public/success.php";
-$FailureUrl ="https://towercrypto.uk/public/failure.php?transactionId=".$txnid;
+$SuccessUrl ="yourdoamim/success.php";
+$FailureUrl ="https://yourdomain/failure.php?transactionId=".$txnid;
 //$FailureUrl ="https://towercrypto.uk/public/failure.php?transactionId=".$txnid;
 $PAYU_BASE_URL = "https://cwp-customer-service.firebaseapp.com/api/v1/deposits";
 //$PAYU_BASE_URL = "https://customerservice.walletpayment.net/api/v1/deposits";
