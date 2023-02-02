@@ -10,9 +10,9 @@ $CustomerEmail = $_GET['CustomerEmail'];
 $CustomerPhone = $_GET['CustomerPhone'];
 $CustomerName = $_GET['CustomerName'];
 $MERCHANT_KEY = "fHZF/nptlfRDv57mcl2g+w=="; // Merchant Key From App
-$SuccessUrl ="https://towercrypto.uk/public/whitelistsuccess.php";
-$FailureUrl ="https://towercrypto.uk/public/whitelistfailure.php?transactionId=".$txnid;
-//$FailureUrl ="https://towercrypto.uk/public/failure.php?transactionId=".$txnid;
+$SuccessUrl ="https://yourdomain/whitelistsuccess.php";
+$FailureUrl ="https://yourdomain/whitelistfailure.php?transactionId=".$txnid;
+//$FailureUrl ="https://yourdomain/failure.php?transactionId=".$txnid;
 $PAYU_BASE_URL = "https://customerservice.walletpayment.net/api/v1/whitelist";
 
 $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
@@ -75,9 +75,9 @@ else{
   	if(isset($obj->message)) {
       $error = $obj->message;
       $error = str_replace(' ', '%20', $error);
-      $url = 'https://towercrypto.uk/user/whitelist_success_response?address='.$address.'&error='.$error;
+      $url = 'https:/yourdomain/user/whitelist_success_response?address='.$address.'&error='.$error;
     } else {
-      $url = 'https://towercrypto.uk/user/whitelist_success_response?address='.$address;
+      $url = 'https://yourdomain/user/whitelist_success_response?address='.$address;
     }
     
     header('Location: '.$url);
