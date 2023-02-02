@@ -14,11 +14,11 @@ $CustomerEmail = $_GET['CustomerEmail'];
 $CustomerPhone = $_GET['CustomerPhone'];
 $CustomerName = $_GET['CustomerName'];
 $MERCHANT_KEY = "fHZF/nptlfRDv57mcl2g+w=="; // Merchant Key From App
-$SuccessUrl ="https://towercrypto.uk/public/withdraw_success.php";
-$FailureUrl ="https://towercrypto.uk/public/withdraw_failure.php";
+$SuccessUrl ="https://yourdomain/withdraw_success.php";
+$FailureUrl ="https://yourdomain/withdraw_failure.php";
 $PAYU_BASE_URL = "https://customerservice.walletpayment.net/api/v1/requests";
-$webhookUrl ="https://towercrypto.uk/public/withdraw_hook.php";
-//$webhookUrl ="https://towercrypto.uk/update_withdraw_status";
+$webhookUrl ="https://yourdomain/withdraw_hook.php";
+//$webhookUrl ="https://yourdomain/update_withdraw_status";
 $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
 $payload = json_encode(
     [
